@@ -74,3 +74,10 @@ console.log(`Total Salary for Racing Department: $${racingDepartmentSalary}`);
 const engineeringDepartmentSalary = calculateDepartmentSalary(company.departments[1]);
 console.log(`Total Salary for Engineering Department: $${engineeringDepartmentSalary}`);
 
+//Task 3: Create a Function to Calculate the Total Salary for All Departments
+function calculateCompanySalary(company) {
+    return company.departments.reduce((total, department) => 
+      total + calculateDepartmentSalary(department), 0);
+  }
+  console.log(calculateCompanySalary(company));
+  
